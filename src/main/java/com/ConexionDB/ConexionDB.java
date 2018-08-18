@@ -20,7 +20,8 @@ public class ConexionDB implements Serializable {
 	public static void main(String [] args){
 		
 		ConexionDB cdb = new ConexionDB();	
-		Properties p = cdb.getProperties("C:/DBSPrimerParcial/DBSLogin/conf/conf.properties");
+		
+		Properties p = cdb.getProperties("C:/LigSysDBS/LigSys/conf/conf.properties");
 		System.out.println(p.getProperty("USUARIO")+p.getProperty("CLAVE")+p.getProperty("URL")+p.getProperty("DRIVER"));
 		
 		
@@ -28,7 +29,7 @@ public class ConexionDB implements Serializable {
 		
 		public Connection getConexion(){
 			
-			Properties p = getProperties("C:/DBSPrimerParcial/DBSLogin/conf/conf.properties");
+			Properties p = getProperties("C:/LigSysDBS/LigSys/conf/conf.properties");
 			return getConexion(p);
 
 		}
